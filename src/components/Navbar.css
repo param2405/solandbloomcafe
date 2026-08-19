@@ -28,6 +28,11 @@
   font-weight: 600;
   cursor: pointer;
   letter-spacing: 2px;
+  color: var(--color-cream);
+  transition: color 0.3s ease;
+}
+
+.navbar.scrolled .logo {
   color: var(--color-espresso);
 }
 
@@ -49,6 +54,13 @@
   letter-spacing: 1px;
   cursor: pointer;
   position: relative;
+  color: var(--color-cream);
+  transition: color 0.3s ease;
+}
+
+.navbar.scrolled .nav-links li,
+.navbar.scrolled .nav-links li a {
+  color: var(--color-espresso);
 }
 
 .nav-links li::after {
@@ -58,8 +70,12 @@
   left: 0;
   width: 0;
   height: 1px;
-  background-color: var(--color-espresso);
+  background-color: var(--color-cream);
   transition: var(--transition-smooth);
+}
+
+.navbar.scrolled .nav-links li::after {
+  background-color: var(--color-espresso);
 }
 
 .nav-links li:hover::after {
@@ -69,6 +85,16 @@
 .mobile-toggle {
   display: none;
   cursor: pointer;
+  color: var(--color-cream);
+  transition: color 0.3s ease;
+}
+
+.navbar.scrolled .mobile-toggle {
+  color: var(--color-espresso);
+}
+
+.navbar:not(.scrolled) .btn-primary {
+  background-color: var(--color-cream);
   color: var(--color-espresso);
 }
 
