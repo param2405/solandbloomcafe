@@ -1,0 +1,62 @@
+.brand-intro {
+  overflow: hidden;
+}
+
+.intro-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.intro-text h2 {
+  font-size: 3rem;
+}
+
+.intro-text p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+.intro-images {
+  position: relative;
+  height: 600px;
+}
+
+.img-primary {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 80%;
+  height: 80%;
+  object-fit: cover;
+  z-index: 1;
+  border-radius: 12px;
+}
+
+.img-secondary {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60%;
+  height: 50%;
+  object-fit: cover;
+  z-index: 2;
+  border: 10px solid var(--color-sand);
+  border-radius: 12px;
+}
+
+@media (max-width: 992px) {
+  .intro-content {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  
+  .intro-text h2 {
+    font-size: 2.5rem;
+  }
+  
+  .intro-images {
+    height: 500px;
+  }
+}

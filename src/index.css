@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Outfit:wght@300;400;500;600&display=swap');
+
+:root {
+  /* Brand Colors */
+  --color-espresso: #2A1A17; /* Dark brown */
+  --color-cream: #FDFBF7; /* Ivory/Cream */
+  --color-sand: #F4EFE6; /* Warmer cream for sections */
+  --color-burgundy: #722F37; /* Wine red */
+  --color-gold: #C5A028; /* Subtle gold */
+  
+  /* Typography */
+  --font-display: 'Cormorant Garamond', serif;
+  --font-body: 'Outfit', sans-serif;
+  
+  /* Utilities */
+  --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  --section-padding: 6rem 5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-espresso);
+  background-color: var(--color-cream);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Typography Classes */
+.font-display { font-family: var(--font-display); }
+.font-body { font-family: var(--font-body); }
+.text-espresso { color: var(--color-espresso); }
+.text-cream { color: var(--color-cream); }
+.text-gold { color: var(--color-gold); }
+.text-burgundy { color: var(--color-burgundy); }
+.bg-espresso { background-color: var(--color-espresso); }
+.bg-cream { background-color: var(--color-cream); }
+.bg-sand { background-color: var(--color-sand); }
+.bg-burgundy { background-color: var(--color-burgundy); }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  border: 1px solid transparent;
+}
+
+.btn-primary {
+  background-color: var(--color-espresso);
+  color: var(--color-cream);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-burgundy);
+  color: var(--color-cream);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--color-espresso);
+  border-color: var(--color-espresso);
+}
+
+.btn-outline:hover {
+  background-color: var(--color-espresso);
+  color: var(--color-cream);
+}
+
+.btn-gold {
+  background-color: var(--color-gold);
+  color: var(--color-espresso);
+}
+
+.btn-gold:hover {
+  background-color: var(--color-espresso);
+  color: var(--color-cream);
+}
+
+/* Layout Utilities */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section {
+  padding: var(--section-padding);
+}
+
+.grid {
+  display: grid;
+}
+
+.flex {
+  display: flex;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.hover-scale {
+  transition: var(--transition-smooth);
+}
+
+.hover-scale:hover {
+  transform: scale(1.03);
+}
+
+/* Botanical Decoration */
+.botanical-line {
+  width: 120px;
+  height: auto;
+  opacity: 0.6;
+}
+
+@keyframes drawLine {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.sun-motif {
+  animation: rotateSun 60s linear infinite;
+}
+
+@keyframes rotateSun {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Section specific margins */
+.mb-1 { margin-bottom: 0.5rem; }
+.mb-2 { margin-bottom: 1rem; }
+.mb-3 { margin-bottom: 1.5rem; }
+.mb-4 { margin-bottom: 2rem; }
+.mb-6 { margin-bottom: 3rem; }
+.mb-8 { margin-bottom: 4rem; }
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Responsive Hide */
+@media (max-width: 768px) {
+  .md-hidden { display: none !important; }
+}
+@media (min-width: 769px) {
+  .md-block { display: block !important; }
+}

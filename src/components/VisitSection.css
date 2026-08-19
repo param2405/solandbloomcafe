@@ -1,0 +1,43 @@
+.visit-content {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 4rem;
+  background-color: var(--color-sand);
+  padding: 4rem;
+}
+
+.visit-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.visit-map {
+  height: 500px;
+  width: 100%;
+}
+
+@media (max-width: 992px) {
+  .visit-content {
+    grid-template-columns: 1fr;
+    padding: 2rem;
+    gap: 3rem;
+  }
+  .visit-map {
+    height: 400px;
+  }
+}
+
+@media (max-width: 640px) {
+  .visit-content {
+    padding: 1.5rem;
+  }
+  .visit-buttons {
+    display: flex;
+    flex-direction: column;
+  }
+  .visit-buttons .btn {
+    margin-right: 0 !important;
+    text-align: center;
+  }
+}
