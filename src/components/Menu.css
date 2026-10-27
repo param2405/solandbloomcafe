@@ -41,11 +41,30 @@
 .menu-item-header h4 {
   font-size: 1.3rem;
   margin: 0;
+  min-width: 0;
+  overflow-wrap: break-word;
+}
+
+.menu-item-header span {
   white-space: nowrap;
+}
+
+.menu-subsection + .menu-subsection {
+  margin-top: 4rem;
+}
+
+.menu-subsection-header {
+  margin-bottom: 2.5rem;
+}
+
+.menu-subsection-header h3 {
+  font-size: 1.8rem;
+  margin: 0 0 0.25rem;
 }
 
 .menu-item-dots {
   flex-grow: 1;
+  min-width: 1.5rem;
   border-bottom: 1px dotted var(--color-espresso);
   margin: 0 1rem;
   opacity: 0.3;
